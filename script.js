@@ -15,6 +15,9 @@ for (var i = 0; i < 16; i++) {
 
 // Generate a random pattern
 function generatePattern() {
+  for (var i = 0; i < blocks.length; i++) {
+    blocks[i].style.backgroundColor = 'lightgray';
+  }
   pattern = [];
   for (var i = 0; i < 2; i++) {
     var index = Math.floor(Math.random() * blocks.length);
@@ -33,8 +36,9 @@ function showPattern() {
 
 // Hide the pattern from the player
 function hidePattern() {
-  for (var i = 0; i < blocks.length; i++) {
-    blocks[i].style.backgroundColor = 'lightgray';
+  for (var i = 0; i < pattern.length; i++) {
+    var index = pattern[i]
+    blocks[index].style.backgroundColor = 'lightgray';
   }
 }
 
@@ -42,8 +46,9 @@ function hidePattern() {
 function checkPattern(event) {
   var clickedBlock = event.target;
   var index = blocks.indexOf(clickedBlock);
-  if (index === pattern[0]) {
-    pattern.shift();
+  if (pattern.indexOf(index) != -1) {
+    var ind = pattern.indexOf(index)
+    pattern.splice(ind, 1);
     clickedBlock.style.backgroundColor = 'green';
     score += 10;
     document.getElementById('score').innerText = 'Score: ' + score;
