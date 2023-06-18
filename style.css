@@ -4,12 +4,11 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  
 }
 
 #gameBoard {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0px;
   border: 2px solid black;
   padding: 40px;
@@ -24,6 +23,12 @@
 }
 
 #score {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#level {
   margin-top: 10px;
   font-size: 18px;
   font-weight: bold;
