@@ -104,7 +104,7 @@ function restartGame() {
   score = 0;
   level = 1;
   pattern_length = 3;
-  grid_size = 6;
+  grid_size = 3;
   gameBoard.style.gridTemplateColumns = "repeat(" + grid_size + ", 1fr)";
   document.getElementById('score').innerText = 'Score: ' + score;
   document.getElementById('level').innerText = 'Level: ' + level;
