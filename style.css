@@ -17,9 +17,11 @@
 .block {
   width: 50px;
   height: 50px;
-  background-color: lightgray;
+  
   cursor: pointer;
   align-items: center;
+  background-color: #A577E0;
+border-radius: 12px;
 }
 
 #score {
@@ -36,4 +38,14 @@
 
 #startButton {
   margin-top: 10px;
+}
+body
+{
+  position: absolute;
+width: 1280px;
+height: 832px;
+left: 0px;
+top: 0px;
+
+background: url(space.jpg);
 }
