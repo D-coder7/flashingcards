@@ -2,14 +2,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <!-- <title>Menu</title> -->
     <!-- <link href="utils.css" rel="stylesheet" type="text/css"> -->
-    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="end-of-game.css" rel="stylesheet" type="text/css">
+    <style>body{background-image: url('images/congratulations-page.png');}</style>
 </head>
 <body>
     <div class="menufont"><div class="mainFont">MEMORY SPACE</div></div>
+    <div class="text">Congratulations! You have completed the game!</div>
     <div class="menu-items">
-        <button class="mainItems" id="start" onclick="document.location='main-game.html'">START</button>
+        <button class="mainItems" id="restart" onclick="document.location='main-game.html'">RESTART</button>
         <!-- <button class="mainItems" id="scores">SCORES</button> -->
         <button class="mainItems" id="exit" onclick="self.close()">EXIT</button>
     </div>
