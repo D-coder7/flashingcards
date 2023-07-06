@@ -10,14 +10,33 @@ var grid_row_size;
 
 // Add blocks to game board
 function addBlocks(no_of_Blocks) {
+  var time = 150;
   for (var i = 0; i < no_of_Blocks; i++) {
-    var block = document.createElement('img');
-    block.className = 'block';
-    block.addEventListener('click', checkPattern);
-    gameBoard.appendChild(block);
-    blocks.push(block);
+    setTimeout(function() {
+      var block = document.createElement('img');
+      block.className = 'block';
+      block.addEventListener('click', checkPattern);
+      gameBoard.appendChild(block);
+      blocks.push(block);
+      block.id = blocks.indexOf(block);
+    }, time);
+    time = time + 150;
   }
+  setTimeout(generatePattern, time);
 }
+
+// function removeBlocks() {
+//   var time = 100;
+//   for (var i = blocks.length-1; i >= 0; i--) {
+//     setTimeout(function() {
+//       var id = i;
+//       var block_id = document.getElementById(id);
+//       block_id.parentElement.removeChild(block_id);
+//     }, time);
+//     time = time + 100;
+//   }
+//   setTimeout(nextLevel, time);
+// }
 
 // Arrange the blocks in a grid layout
 // function arrangeBlocks() {
@@ -38,6 +57,7 @@ function generatePattern() {
       pattern.push(index);
     }
   }
+  setTimeout(showPattern, 500);
 }
 
 // Show pattern to the player
@@ -70,8 +90,9 @@ function checkPattern(event) {
     score += 10;
     document.getElementById('score').innerText = 'Score: ' + score;
     if (pattern.length === 0) {
-      alert('Congratulations! You cleared the level.');
-      nextLevel();
+      // alert('Congratulations! You cleared the level.');
+      // removeBlocks();
+      setTimeout(nextLevel, 750);
     }
   } else {
     location.href = "game-over.html";
@@ -116,8 +137,8 @@ function goToLevel(rows, columns){
   gameBoard.style.marginTop = -40*rows + 'px';
   addBlocks(rows*columns);
   // arrangeBlocks();
-  generatePattern();
-  setTimeout(showPattern, 500);
+  // generatePattern();
+  // setTimeout(showPattern, 500);
 }
 
 // Restart the game
@@ -130,6 +151,6 @@ function restartGame() {
   goToLevel(grid_row_size, grid_col_size);
 }
 
-document.getElementById('startButton').addEventListener('click', restartGame);
+// document.getElementById('startButton').addEventListener('click', restartGame);
 
 restartGame();
