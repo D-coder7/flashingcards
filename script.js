@@ -95,6 +95,8 @@ function checkPattern(event) {
       setTimeout(nextLevel, 750);
     }
   } else {
+    localStorage.setItem("level", level);
+    localStorage.setItem("score", score);
     location.href = "game-over.html";
   }
 }
@@ -102,6 +104,8 @@ function checkPattern(event) {
 // Next level
 function nextLevel() {
   if (level === 15){
+    // localStorage.setItem("level", level);
+    localStorage.setItem("score", score);
     location.href = "congratulations.html";
   }
   else{
