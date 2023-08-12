@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <title>Menu</title> -->
+    <title>Game-over</title>
     <!-- <link href="utils.css" rel="stylesheet" type="text/css"> -->
     <link href="end-of-game.css" rel="stylesheet" type="text/css">
     <style>body{background-image: url('images/background.png');}</style>
@@ -10,11 +10,18 @@
 <body>
     <div class="menufont"><div class="mainFont">MEMORY SPACE</div></div>
     <div class="text">Game Over!</div>
+    <div class="text1" id="score"></div>
+    <div class="text1" id="level"></div>
     <div class="menu-items">
         <button class="mainItems" id="restart" onclick="document.location='rules.html'">RESTART</button>
         <!-- <button class="mainItems" id="scores">SCORES</button> -->
         <button class="mainItems" id="exit" onclick="document.location='index.html'">EXIT</button>
     </div>
     <!-- <button class="button"><a href="main_game.html">Start Game</button> -->
+    
+    <script>
+        document.getElementById("score").innerHTML= "Score: " + localStorage.getItem("score");
+        document.getElementById("level").innerHTML= "Reached level: " + localStorage.getItem("level");
+    </script>
 </body>
 </html>
