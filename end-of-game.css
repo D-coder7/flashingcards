@@ -43,7 +43,7 @@ body {
 
 .mainFont {
     font-family: fantasy;
-    padding-top: 10%;
+    /* padding-top: 10%; */
     left: 50%;
     /* text-align: center; */
     /* margin: auto auto; */
@@ -73,7 +73,7 @@ body {
     width: 207px;
     height: 69px;
     left: 50%;
-    top: 50%;
+    top: 55%;
     margin-left: -100px;
 
     /* font-family: 'Inter';
@@ -97,7 +97,7 @@ body {
     width: 207px;
     height: 69px;
     left: 50%;
-    top: 65%;
+    top: 70%;
     margin-left: -100px;
 
     color: #000000;
@@ -107,7 +107,19 @@ body {
     text-align: center;
     /* justify-self: center; */
     font-family: fantasy;
-    font-size: 30px;
+    font-size: 60px;
     position: relative;
-    top: 40%;
+    top: 25%;
+    /* padding-bottom: 1%; */
+    padding-top: 1%;
+}
+.text1 {
+    text-align: center;
+    /* justify-self: center; */
+    font-family: fantasy;
+    font-size: 40px;
+    position: relative;
+    top: 25%;
+    /* padding-top: 1%; */
+    /* color: #FF00F5; */
 }
